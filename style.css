@@ -4699,3 +4699,358 @@ table {
     --games-nav-text-color: rgba(255,255,255, 1);
     --updated-block-color: rgba(255,255,255, 1)
 }
+
+/* ===================== ROOT VARIABLES ===================== */
+:root {
+    --aw-login:        #EDEEF8;
+    --aw-login-txt:    #1F1F1F;
+    --aw-reg:          rgba(241, 151, 0, 1);
+    --aw-btn:          rgba(241, 151, 0, 1);
+    --aw-btn-txt:      #0b0b0b;
+    --aw-foot-bg:      rgba(26, 56, 72, 1);
+    --aw-txt:          rgba(0,0,0,1);
+    --aw-title:        rgba(0,0,0,1);
+    --aw-menu:         rgba(255,255,255,1);
+    --aw-mobile-bg:    #FFFFFF;
+    --aw-th:           #BBC7F0;   /* table-header */
+    --aw-t1:           #F4F5F7;   /* table row 1 */
+    --aw-t2:           #E3E4F1;   /* table row 2 */
+    --aw-theme:        rgba(248, 242, 233, 1);
+    --aw-btn-hov:      #4c7eff;
+    --aw-brd:          rgba(1, 7, 158, 0.07);
+    --aw-rate-img:     #3B3B3B;
+    --aw-rc-bg:        #11182C;
+    --aw-rc-bg-top:    linear-gradient(90deg, #184fff 0%, #0aa5ff 100%);
+    --aw-f-menu:       rgba(255,255,255,1);
+    --aw-f-txt:        rgba(255,255,255,1);
+    --aw-g-nav-bg:     #F4F5F7;
+    --aw-g-nav-brd:    #FFFFFF;
+    --aw-g-nav-txt:    rgba(255,255,255,1);
+    --aw-upd:          rgba(255,255,255,1);
+}
+
+/* ===================== MAIN WRAPPER ===================== */
+.aw-main-content {
+    width: 100%;
+}
+
+/* ===================== CTA SECTION ===================== */
+.aw-sect__inner {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ===================== PLAY / GAMESPOT ===================== */
+.aw-gamespot {
+    display: grid;
+    grid-template-areas:
+        "aw-gamespot__left"
+        "content-section"
+        "aw-gamespot__right";
+    max-width: 1110px;
+    width: 100%;
+    margin: 40px auto 100px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .aw-gamespot { padding: 0 16px; }
+}
+
+@media only screen and (max-width: 767px) {
+    .aw-gamespot { margin: 20px auto 60px; }
+}
+
+@media only screen and (min-width: 992px) {
+    .aw-gamespot {
+        grid-template-areas:
+            "aw-gamespot__left aw-gamespot__right"
+            "content-section   content-section";
+        grid-template-columns: 65% 35%;
+    }
+}
+
+.aw-gamespot__left {
+    grid-area: aw-gamespot__left;
+    width: 100%;
+    padding-right: 0;
+}
+
+.aw-gamespot__left h1,
+.aw-gamespot__left h2 {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 700;
+    color: var(--aw-title);
+    margin: 0 0 28px;
+}
+
+@media only screen and (max-width: 767px) {
+    .aw-gamespot__left h1,
+    .aw-gamespot__left h2 {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 110%;
+        margin-bottom: 16px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .aw-gamespot__left { margin: 0; padding-right: 20px; }
+}
+
+.aw-gamespot__right {
+    grid-area: aw-gamespot__right;
+    margin: 24px 0 0;
+    width: 100%;
+}
+
+.aw-gamespot__right h1,
+.aw-gamespot__right h2 {
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 700;
+    color: var(--aw-title);
+    margin: 0 0 28px;
+}
+
+@media only screen and (max-width: 767px) {
+    .aw-gamespot__right h1 {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 110%;
+        margin-bottom: 16px;
+    }
+}
+
+.aw-gamespot__right h2 {
+    display: flex;
+    align-items: center;
+    min-height: 68px;
+    font-size: 26px;
+    line-height: normal;
+    margin: 0 0 6px;
+}
+
+@media only screen and (max-width: 767px) {
+    .aw-gamespot__right h2 {
+        font-size: 24px;
+        line-height: 110%;
+        margin-bottom: 16px;
+        min-height: auto;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .aw-gamespot__right { margin: 0; }
+}
+
+/* --- Overview table on the right --- */
+.aw-gamespot__right table {
+    border-radius: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border: 1px solid var(--aw-brd);
+    box-shadow: 0 0 0 1px var(--aw-brd);
+}
+
+.aw-gamespot__right table tr td,
+.aw-gamespot__right table tr th {
+    padding: 12px 28px;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: left;
+    border: 1px solid var(--aw-brd);
+    color: var(--aw-txt);
+    background: var(--aw-t1);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .aw-gamespot__right table tr td { padding: 12px 4px; }
+}
+
+.aw-gamespot__right table tr th { font-weight: 600; }
+
+@media only screen and (max-width: 767px) {
+    .aw-gamespot__right table tr th { padding: 12px 4px; }
+}
+
+.aw-gamespot__right table tr:last-of-type td { border-bottom: none; }
+
+/* --- Play box (blurred background + buttons) --- */
+.aw-gamespot__box {
+    width: 100%;
+    min-height: 356px;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+    .aw-gamespot__box { min-height: 190px; }
+}
+
+.aw-gamespot__bg,
+.aw-gamespot__bg::before {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+}
+
+.aw-gamespot__bg {
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.aw-gamespot__bg::before {
+    background: rgba(0,0,0,.6);
+    display: block;
+    border-radius: inherit;
+    content: "";
+}
+
+.aw-gamespot__box-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.aw-gamespot__box-inner.is-hidden { display: none; }
+
+/* --- Buttons inside the play box --- */
+.aw-gamespot__button {
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    max-width: 252px;
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #c2c0ce;
+    margin: 0 auto;
+    color: #090909;
+    font-size: 16px;
+    font-weight: 700;
+    transition: .3s ease-in-out;
+}
+
+.aw-gamespot__button svg { margin-right: 10px; }
+
+.aw-gamespot__button + .aw-gamespot__button { margin-top: 14px; }
+
+@media only screen and (min-width: 1025px) {
+    .aw-gamespot__button:hover { background: #a8a6b3; }
+}
+
+.aw-gamespot__button--casino {
+    background: linear-gradient(180deg, #fdcc06 0, #ffea00 100%);
+}
+
+@media only screen and (min-width: 1025px) {
+    .aw-gamespot__button--casino:hover {
+        background: linear-gradient(180deg, #ffea00 0, #fdcc06 100%);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .aw-gamespot__button { height: 42px; max-width: 220px; }
+}
+
+/* --- Demo button (gray, same shape) --- */
+.aw-play-demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 252px;
+    width: 100%;
+    height: 52px;
+    border-radius: 10px;
+    background: #c2c0ce;
+    color: #090909;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 14px auto 0;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+@media only screen and (min-width: 1025px) {
+    .aw-play-demo:hover { background: #a8a6b3; }
+}
+
+@media only screen and (max-width: 767px) {
+    .aw-play-demo { height: 42px; max-width: 220px; }
+}
+
+/* --- Iframe (16:9) --- */
+.aw-gamespot__iframe {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.aw-gamespot__iframe .aw-frame,
+.aw-frame {
+    border: 0;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.aw-gamespot__iframe.is-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* --- Play block content area (grid area) --- */
+.aw-gamespot .aw-sect {
+    padding: 0;
+    grid-area: content-section;
+    width: 100%;
+    margin: 24px 0 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .aw-gamespot .aw-sect h1,
+    .aw-gamespot .aw-sect h2 {
+        font-size: 26px;
+        margin: 0 0 18px;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .aw-gamespot .aw-sect { margin: 28px 0 0; }
+}
+
+/* --- Global table spacing --- */
+table { margin-bottom: 32px; }
+
+/* --- Table body helper (for text sections) --- */
+.aw-text-body ol,
+.aw-text-body p,
+.aw-text-body ul {
+    font-size: 110%;
+    line-height: 135%;
+}
+
+/* --- Debug outlines (optional) --- */
+.aw-debug-green { outline: 1px solid green; }
+.aw-debug-red   { outline: 1px solid red; }
